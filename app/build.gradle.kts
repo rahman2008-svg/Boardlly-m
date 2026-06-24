@@ -14,20 +14,12 @@ defaultConfig {
     applicationId = "com.aistudio.boardly.wbzkpt"
     minSdk = 24
     targetSdk = 36
+
     versionCode = 1
     versionName = "1.0"
 
     testInstrumentationRunner =
         "androidx.test.runner.AndroidJUnitRunner"
-}
-
-signingConfigs {
-    create("debugConfig") {
-        storeFile = file("${rootDir}/debug.keystore")
-        storePassword = "android"
-        keyAlias = "androiddebugkey"
-        keyPassword = "android"
-    }
 }
 
 buildTypes {
@@ -42,14 +34,9 @@ buildTypes {
             ),
             "proguard-rules.pro"
         )
-
-        signingConfig =
-            signingConfigs.getByName("debugConfig")
     }
 
     debug {
-        signingConfig =
-            signingConfigs.getByName("debugConfig")
     }
 }
 
