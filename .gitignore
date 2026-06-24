@@ -16,3 +16,5 @@
 local.properties
 .env
 debug.keystore
+gradle-9.6.0/
+gradle-9.6.0-bin.zip
