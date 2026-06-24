@@ -1,14 +1,14 @@
 workflows:
-  boardly-workflow:
-    name: Boardly Android Build
+  android-workflow:
+    name: Android Workflow
 
     environment:
       java: 17
 
     scripts:
       - chmod +x gradlew
-      - ./gradlew clean
-      - ./gradlew assembleDebug
+      - ./gradlew assembleRelease
 
     artifacts:
       - app/build/outputs/**/*.apk
+      - app/build/outputs/**/*.aab
