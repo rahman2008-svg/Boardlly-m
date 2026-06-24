@@ -1,11 +1,7 @@
 workflows:
-android-workflow:
-name: Android Release Build
-
-max_build_duration: 60
-
+android:
 environment:
-  java: 17
+java: 17
 
 scripts:
   - chmod +x gradlew
@@ -14,10 +10,5 @@ scripts:
   - ./gradlew bundleRelease
 
 artifacts:
-  - app/build/outputs/apk/release/*.apk
-  - app/build/outputs/bundle/release/*.aab
-
-publishing:
-  email:
-    recipients:
-      - your-email@example.com
+  - app/build/outputs/**/*.apk
+  - app/build/outputs/**/*.aab
